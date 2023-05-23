@@ -24,14 +24,12 @@ class Binarytreebloc extends Bloc<BinarytreeblocEvent, BinarytreeblocState> {
         root.left = newNode;
       } else {
         _insertNode(root.left!, newNode);
-        root.hasLeftChild = true;
       }
     } else if (newNode.value > root.value) {
       if (root.right == null) {
         root.right = newNode;
       } else {
         _insertNode(root.right!, newNode);
-        root.hasRightChild = true;
       }
     }
   }

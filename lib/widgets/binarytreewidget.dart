@@ -8,8 +8,7 @@ import '../bloc/binarytreebloc_bloc.dart';
 
 // ignore: must_be_immutable
 class TreeView extends StatelessWidget {
-  Node? node;
-  TreeView({super.key, required this.node});
+  const TreeView({super.key});
 
   @override
   Widget build(BuildContext context) {

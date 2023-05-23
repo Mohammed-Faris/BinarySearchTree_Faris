@@ -22,15 +22,15 @@ class BinaryTreeScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
                   controller: controller,
-                  onSubmitted: (value) {
-                    if (controller.text == "") {
-                      return;
-                    }
-                    context
-                        .read<Binarytreebloc>()
-                        .add(InsertEvent(value: int.parse(controller.text)));
-                    controller.clear();
-                  },
+                  // onSubmitted: (value) {
+                  //   if (controller.text == "") {
+                  //     return;
+                  //   }
+                  //   context
+                  //       .read<Binarytreebloc>()
+                  //       .add(InsertEvent(value: int.parse(controller.text)));
+                  //   controller.clear();
+                  // },
                   keyboardType: TextInputType.number,
                 ),
               ),
@@ -47,9 +47,7 @@ class BinaryTreeScreen extends StatelessWidget {
                   child: const Text("Insert")),
               const Text("Root"),
               const Icon(Icons.arrow_downward),
-              TreeView(
-                node: null,
-              ),
+              const TreeView(),
             ],
           ),
         ));
